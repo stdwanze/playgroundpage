@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<link rel="icon" href="img/overview_16.png" type="image/png">
+		<link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" />
+		<script type='text/javascript' src="lib/jquery.1.10.2.min.js"></script>
+		<script type='text/javascript' src="lib/knockout.js"></script>
+		<title>Playground of stdwanze</title>
+	</head>
+	<body>
+		<div>
+			<div>
+				Welcome to stdwanzes deposition of stuff.
+			</div>
+			
+		</div>
+		<div id="js-projects">
+			<h2>HTML5-Projects (Canvas)</h2>
+			
+			<div data-bind="foreach: jsprojects">
+				<div class="js-project">
+				 <h3 data-bind="text: ProjectName"></h3>
+				 <img width="300px" data-bind="attr:{src: imagesrc}" /> <br> 
+				 <a data-bind="attr: { href: url, title: play_title }" >Play</a>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script>
+			
+			var vm = {
+				jsprojects : [
+					{ ProjectName: "FallingJim", url: "./fallingjim/index.htm", play_title: "Play", imagesrc: "./img/fallingjim.png"},
+					{ ProjectName: "ShapeCatch", url: "./shapechatch/index.htm", play_title: "Play",imagesrc: "./img/shapecatch.png"}
+				]
+			};
+		
+									
+			ko.applyBindings(vm);
+		</script>
+	</body>
+</html>
