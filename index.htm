@@ -24,8 +24,8 @@
 			<div data-bind="foreach: jsprojects">
 				<div class="js-project">
 				 <h3 data-bind="text: ProjectName"></h3>
-				 <img width="300px" data-bind="attr:{src: imagesrc}" /> <br> 
-				 <a data-bind="attr: { href: url, title: play_title }" >Play</a>
+				 <img  data-bind="attr:{src: imagesrc, width: imgwidth}" /> <br> <!--width="300px"-->
+				 <a data-bind="attr: { href: url, title: play_title }" ><span data-bind="text: linktext"></span></a>
 				</div>
 			</div>
 			
@@ -35,8 +35,10 @@
 			
 			var vm = {
 				jsprojects : [
-					{ ProjectName: "FallingJim", url: "./fallingjim/index.htm", play_title: "Play", imagesrc: "./img/fallingjim.png"},
-					{ ProjectName: "ShapeCatch", url: "./shapechatch/index.htm", play_title: "Play",imagesrc: "./img/shapecatch.png"}
+					{ ProjectName: "FallingJim", url: "./fallingjim/index.htm", play_title: "Play", imagesrc: "./img/fallingjim.png",imgwidth: "400px", linktext: "Play"},
+					{ ProjectName: "ShapeCatch", url: "./shapechatch/index.htm", play_title: "Play",imagesrc: "./img/shapecatch.png",imgwidth: "300px", linktext: "Play"},
+					{ ProjectName: "CanvasKit", url: "https://github.com/stdwanze/canvaskit", play_title: "GitHub", imagesrc: "./img/canvaskit.png",imgwidth: "200px", linktext: "@Github"}
+				
 				]
 			};
 		

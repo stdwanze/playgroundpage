@@ -1,5 +1,10 @@
 body
 {
 	font-family: "Arial";
+	float: clear;
 }
-
+.js-project
+{
+	float: left;
+	margin: 10px;
+}
