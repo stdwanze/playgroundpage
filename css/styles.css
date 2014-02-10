@@ -5,6 +5,6 @@ body
 }
 .js-project
 {
-	float: left;
+	display: inline-block;
 	margin: 10px;
 }
